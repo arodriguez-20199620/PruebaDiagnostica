@@ -4,129 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
+    <h1 class="titulo">Bienvenido a mi Calculadoras</h1>
+    <div class="contenedor-calculadora">
+        <div class="calculadora">
+            <input type="text" id="pantalla">
+            <div class="botones">
+                <button onclick="agregarCaracter('7')">7</button>
+                <button onclick="agregarCaracter('8')">8</button>
+                <button onclick="agregarCaracter('9')">9</button>
+                <button onclick="agregarCaracter('/')">/</button>
+                <button onclick="agregarCaracter('4')">4</button>
+                <button onclick="agregarCaracter('5')">5</button>
+                <button onclick="agregarCaracter('6')">6</button>
+                <button onclick="agregarCaracter('X')">X</button>
+                <button onclick="agregarCaracter('1')">1</button>
+                <button onclick="agregarCaracter('2')">2</button>
+                <button onclick="agregarCaracter('3')">3</button>
+                <button onclick="agregarCaracter('-')">-</button>
+                <button onclick="agregarCaracter('0')">0</button>
+                <button onclick="agregarCaracter('.')">.</button>
+                <button onclick="agregarCaracter('+')">+</button>
+                <button onclick="calcular()">=</button>
+                <button onclick="limpiarPantalla()">C</button>
 
-    <nav class="navbar">
-        <div class="logo">Arodriguez</div>
-        <ul class="nav-list">
-            <li><a href="#sobre">Sobre mi</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#habilidades">Habilidades</a></li>
-            <li><a href="#multimedia">Multimedia</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </nav>
-
-    <div class="contenedor" style="padding-top: 100px;">
-        <div class="txt">
-            <h1>¡Hola y bienvenido/a a mi mundo creativo!</h1>
-            <br>
-            <p>¡Hola Kaled! Es un placer conocerte. Soy un apasionado programador con habilidades sólidas y una pasión
-                innata por la resolución de problemas a través del código. Mi experiencia y destreza me han permitido
-                destacarme en diversos proyectos, demostrando no solo mi capacidad técnica sino también mi habilidad
-                para trabajar de manera efectiva en equipo.</p>
+            </div>
         </div>
-        <img class="imagen" src="f1.jpg" alt="foto">
     </div>
 
-    <article id="proyectos">
-        <h1 class="titulo1">Proyectos</h1>
-        <div class="card-container">
-            <div class="card">
-                <div class="card-image">
-                    <img src="image.png" alt="Imagen 1">
-                </div>
-                <div class="card-content">
-                    <h2>Tonys Kinal</h2>
-                    <p>Es un gestor de que ayudar tener mejor control sobre un restaurante</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-image">
-                    <img src="image2.jpg" alt="Imagen 1">
-                </div>
-                <div class="card-content">
-                    <h2>Super Can</h2>
-                    <p>Programa dedicado a una veterinaria para reliazar citas medicas para los animales</p>
-                </div>
-            </div>
-        </div>
-    </article>
-
-    <article id="habilidades">
-        <h1 class="titulo1">Habilidades</h1>
-        <div class="listado">
-
-            <ul class="shopping-list">
-                <li>
-                    <div class="product-info">
-                        <h2>Java</h2>
-
-                    </div>
-                </li>
-                <li>
-                    <div class="product-info">
-                        <h2>Html</h2>
-
-                    </div>
-                </li>
-
-                <li>
-                    <div class="product-info">
-                        <h2>MySql</h2>
-
-                    </div>
-                </li>
-                <li>
-                    <div class="product-info">
-                        <h2>JavaScript</h2>
-
-                    </div>
-                </li>
-                <li>
-                    <div class="product-info">
-                        <h2>React</h2>
-
-                    </div>
-                </li>
-
-            </ul>
-        </div>
-
-    </article>
-
-    <article id="multimedia" style="text-align: center;">
-        <h1 class="titulo1">Multimedia</h1>
-        <p style="color: white; padding-top: 30px;">Cancion favorita</p>
-        <audio controls>
-            <source src="Ovi - Dia De Pago ft. Duki [Official Video].mp3" type="audio/mp3">
-            Tu navegador no soporta el elemento de audio.
-        </audio>
-    </article>
-
-    <article id="contacto"> 
-        <h1 class="titulo1">Contacto</h1>
-        <div class="container">
-            <form action="#" method="post">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
-
-                <label for="email">Correo electrónico:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-
-                <button type="submit">Enviar Mensaje</button>
-            </form>
-        </div>
-    </article>
-
+    <!-- Copyright Nombre, apellido, kinal 2024 -->
+    <div class="foooter">
+        <p>©Copyright Angel Rodriguez Kinal 2024</p>
+    </div>
+    <script src="assets/logica.js"></script>
 </body>
 
 </html>
