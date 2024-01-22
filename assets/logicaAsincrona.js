@@ -1,20 +1,20 @@
 
-function enviarDatos() {
+async function enviarDatos() {
     const nombre = document.getElementById('nombre').value;
-    enviarDatosAlServidor(nombre)
-        .then(mensajeAgradecimiento)
-        .catch(mensajeError);
+    try {
+        const resulado = await enviarDatosAlServidor(nombre);
+        mensajeAgradecimiento(resulado)
+    } catch (e) {
+        mensajeError(e);
+    }
 }
 
 function enviarDatosAlServidor(nombre) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             const exito = nombre.toLowerCase() !== 'error';
-            if (exito) {
-                resolve('Bienvenido al sistema');
-            }else {
-                reject('Acceso denegado');
-            }
+            const resulado = exito  ? "Bienvenido al sistema" :"Acceso denegado";
+            exito ? resolve(resulado) : reject(resulado);
         }, 2000);
     });
 }
